@@ -26,7 +26,7 @@ SECRET_KEY = '9km2+^fen7nt%v5p9+297kz4hrxga0&9&irm3o+%ydfzpq(fr#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['intense-badlands-57764.herokuapp.com']
 
 
 # Application definition
