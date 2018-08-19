@@ -26,7 +26,9 @@ SECRET_KEY = '9km2+^fen7nt%v5p9+297kz4hrxga0&9&irm3o+%ydfzpq(fr#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['intense-badlands-57764.herokuapp.com']
+ALLOWED_HOSTS = ['intense-badlands-57764.herokuapp.com',
+                 '127.0.0.1',
+                 ]
 
 
 # Application definition
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls',
 ]
 
 MIDDLEWARE = [
@@ -74,15 +77,15 @@ WSGI_APPLICATION = 'galeria.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = { 'default': dj_database_url.config() }
+DATABASES = {'default': dj_database_url.config(conn_max_age=500, require_ssl=True)}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'galeria',
-#         'USER': 'movidatabaseuser',
-#         'PASSWORD': 'movidatabasepass1460',
-#         'HOST': 'movprocserver.cloudapp.net',
-#         'PORT': '3306',
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'tutorial',
+#         'USER': 'dbuser',
+#         'PASSWORD': 'casa123',
+#         'HOST': '',
+#         'PORT': '',
 #     }
 # }
 
