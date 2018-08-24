@@ -79,16 +79,16 @@ WSGI_APPLICATION = 'galeria.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {'default': dj_database_url.config()}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'tutorial',
-        'USER': 'dbuser',
-        'PASSWORD': 'casa123',
-        'HOST': '',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'tutorial',
+#         'USER': 'dbuser',
+#         'PASSWORD': 'casa123',
+#         'HOST': '',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
