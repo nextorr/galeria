@@ -1,3 +1,8 @@
+{#Load bootstrap django resources#}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,14 @@
 <body>
 <h1 align="center">Galeria</h1>
 {%for imagen in lista_imagenes %}
-<img src="{{imagen.url}}" width="400" height="300">
+<div class="col-md-4 col-sm-6 col-lg-3 well">
+{%if imagen.imageFile == None %}
+<img class="img-responsive" src="{{imagen.url}}" width="400" height="300">
+{% else %}
+<img class="img-responsive" src="/media/{{imagen.imageFile}}" width="400" height="300">
+{% endif %}
+</div>
+
 {% endfor %}
 </body>
 </html>

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
     'polls',
 ]
 
@@ -78,16 +79,16 @@ WSGI_APPLICATION = 'galeria.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {'default': dj_database_url.config()}
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'tutorial',
-#         'USER': 'dbuser',
-#         'PASSWORD': 'casa123',
-#         'HOST': '',
-#         'PORT': '',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'tutorial',
+        'USER': 'dbuser',
+        'PASSWORD': 'casa123',
+        'HOST': '',
+        'PORT': '',
+    }
+}
 
 
 # Password validation
@@ -131,3 +132,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
